@@ -28,16 +28,9 @@ class SavedContactsActivity : AppCompatActivity() {
                         var contactmodel = ArrayList<ContactsModel>()
                         contactmodel.add(contactsModel)
                         SaveContact.save(contactmodel, applicationContext)
-                        Toast.makeText(applicationContext, "saved successfully", Toast.LENGTH_SHORT)
-                            .show()
                     } else {
                         model.add(contactsModel)
                         SaveContact.save(model, applicationContext)
-                        Toast.makeText(
-                            applicationContext,
-                            "" + model.size,
-                            Toast.LENGTH_SHORT
-                        ).show()
                     }
                 }
 
@@ -57,8 +50,6 @@ class SavedContactsActivity : AppCompatActivity() {
                         model.clear()
                         model.addAll(templist)
                         SaveContact.save(model, applicationContext)
-                        Toast.makeText(applicationContext, "" + model.size, Toast.LENGTH_SHORT)
-                            .show()
                     }
                 }
 

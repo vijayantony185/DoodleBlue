@@ -29,8 +29,6 @@ class CallReceiver : BroadcastReceiver() {
                         if (model != null) {
                             model.forEach {
                                 if (it.number.equals(incomingNumber)) {
-                                    Toast.makeText(context, "saved number", Toast.LENGTH_SHORT)
-                                        .show()
 
                                     val builder: AlertDialog.Builder =
                                         AlertDialog.Builder(context.applicationContext)
